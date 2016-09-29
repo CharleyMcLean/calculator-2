@@ -17,7 +17,13 @@ def prefix_calc():
         user_input_list = user_input.split(" ")
         #print user_input_list
         
-        if user_input_list[0] == "q":
+        if user_input_list[0] not in ["+",'-', '/' ,'*', 'pow','mod', 'square', 'cube']:
+            print "Please start with an operator."
+
+        for user in user_input_list[1:]
+            elif user_input_list[1:] 
+
+        elif user_input_list[0] == "q":
             break
         
         elif user_input_list[0] == "+":
