@@ -5,7 +5,7 @@ Using our arithmetic.py file from Exercise02, create the
 calculator program yourself in this file.
 """
 
-from arithmetic2 import *
+from arithmetic_further import *
 
 
 # def evaluate_expression(user_string):
@@ -16,22 +16,31 @@ def prefix_calc():
         user_input = raw_input("> ")
         user_input_list = user_input.split(" ")
         #print user_input_list
+        
         if user_input_list[0] == "q":
             break
+        
         elif user_input_list[0] == "+":
-            print add(int(user_input_list[1]), int(user_input_list[2]))
+            return add(user_input_list[1:])
+        
         elif user_input_list[0] == "-":
-            print subtract(int(user_input_list[1]), int(user_input_list[2]))
+            return subtract((user_input_list[1: ]))
+        
         elif user_input_list[0] == "*":
-            print multiply(int(user_input_list[1]), int(user_input_list[2]))
+            return multiply(user_input_list[1:])
+        
         elif user_input_list[0] == "/":
-            print divide(int(user_input_list[1]), int(user_input_list[2]))
+            return divide(user_input_list[1:])
+        
         elif user_input_list[0] == "square":
             print square(int(user_input_list[1]))
+        
         elif user_input_list[0] == "cube":
             print cube(int(user_input_list[1]))
+        
         elif user_input_list[0] == "pow":
-            print power(int(user_input_list[1]), int(user_input_list[2]))
+            return power(user_input_list[1:])
+        
         else:
             print mod(int(user_input_list[1]), int(user_input_list[2]))
 
